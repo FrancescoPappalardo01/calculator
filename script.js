@@ -19,10 +19,7 @@ const btnDel = document.getElementById("del");
 const btnAc = document.getElementById("ac");
 const btnComma = document.getElementById("comma");
 
-/*   let operatorKeys = document.querySelectorAll('.operators');
-  operatorKeys.forEach(operator => {
-    operator.classList.remove('selected-operator');
-  }); */
+
 
 // Add event listeners to buttons
 btnOne.addEventListener("click", () => display.value += "1");
@@ -39,19 +36,15 @@ btnPlus.addEventListener("click", () => display.value += " + ");
 btnMinus.addEventListener("click", () => display.value += " - ");
 btnTimes.addEventListener("click", () => display.value += " * ");
 btnDivide.addEventListener("click", () => display.value += " / ");
-btnPercentage.addEventListener("click", () => display.value += " % ");
 btnComma.addEventListener("click", () => display.value += ".");
 
 btnAc.addEventListener("click", () => display.value = ""); // Clear display
 btnDel.addEventListener("click", () => display.value = display.value.slice(0, -1)); // Delete last character
 
 btnPercentage.addEventListener("click", () => {
-    
-    if (display.value) {
-        
-        display.value = eval(display.value) / 100;
-    }
+    display.value = eval(display.value) / 100;
 });
+
 
 
 const btnEquals = document.getElementById("equals");
