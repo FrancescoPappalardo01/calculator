@@ -1,119 +1,67 @@
-/* container styles */
-#container {
-    display: grid;
-    grid-template-columns: repeat(5, 100px); 
-    grid-template-rows: repeat(6, 100px);    
-    grid-gap: 10px;                        
-    align-items: center;                    
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* all buttons display */
-#container > button {
-    border-radius: 100px;    
-    font-size: 1.5rem;       
-    
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg, #0a0a0a, #3a4452);
+}
+
+.calculator{
+    border: 1px solid #717377;
+    padding: 20px;
+    border-radius: 16px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgba(113, 115, 119, 0.5);
+
+}
+
+input{
+    width: 320px;
     border: none;
-    cursor: pointer;         
-    
+    padding: 24px;
+    margin: 10px;
+    background: transparent;
+    box-shadow: 0px 3px 15px rgbs(84, 84, 84, 0.1);
+    font-size: 40px;
+    text-align: right;
+    cursor: pointer;
+    color: #ffffff;
 }
 
-
-
-/* display style */
-.display { 
-    grid-column: 2 / 5;       
-    grid-row: 1 / 2;         
-    height: 50px;           
-    border-radius: 10px;    
-    border: 2px solid #ccc; 
-    padding: 10px;
-    font-size: 2rem;        
-    text-align: right;      
-    box-sizing: border-box; 
-    background-color: #f7f7f7;
+input::placeholder{
+    color: #ffffff;
 }
 
-/* Grid placement for numbers */
-#one { grid-column: 2 / 3; grid-row: 3 / 4; }
-#two { grid-column: 3 / 4; grid-row: 3 / 4; }
-#three { grid-column: 4 / 5; grid-row: 3 / 4; }
-#four { grid-column: 2 / 3; grid-row: 4 / 5; }
-#five { grid-column: 3 / 4; grid-row: 4 / 5; }
-#six { grid-column: 4 / 5; grid-row: 4 / 5; }
-#seven { grid-column: 2 / 3; grid-row: 5 / 6; }
-#eight { grid-column: 3 / 4; grid-row: 5 / 6; }
-#nine { grid-column: 4 / 5; grid-row: 5 / 6; }
-#zero { grid-column: 3 / 4; grid-row: 6 / 7; }
-
-/* Grid placement for operators */
-#equals { grid-column: 5 / 6; grid-row: 6 / 7; }
-#plus { grid-column: 5 / 6; grid-row: 5 / 6; }
-#minus { grid-column: 5 / 6; grid-row: 4 / 5; }
-#times { grid-column: 5 / 6; grid-row: 3 / 4; }
-#divide { grid-column: 5 / 6; grid-row: 2 / 3; }
-#percentage { grid-column: 4 / 5; grid-row: 2 / 3; }
-
-/* Grid placement for delete,ac and comma buttons */
-#del { grid-column: 3 / 4; grid-row: 2 / 3; }
-#ac { grid-column: 2 / 3; grid-row: 2 / 3; }
-#comma { grid-column: 4 / 5; grid-row: 6 / 7; }
-
-/* Responsive Design */
-
-/* Larger screens (default) */
-@media (min-width: 600px) {
-    #container {
-        grid-template-columns: repeat(5, 120px); 
-        grid-template-rows: repeat(6, 120px);
-    }
-
-    #container > button {
-        font-size: 2rem;
-        padding: 25px;
-    }
-
-    .display {
-        font-size: 2.5rem;
-    }
+button{
+    border: none;
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+    border-radius: 50%;
+    background: transparent;
+    color: #ffffff;
+    font-size: 20px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 }
 
-/* Medium screens */
-@media (max-width: 599px) {
-    #container {
-        grid-template-columns: repeat(5, 70px); 
-        grid-template-rows: repeat(6, 70px);    
-        grid-gap: 8px;
-    }
-
-    #container > button {
-        font-size: 1.2rem;
-        padding: 15px;
-    }
-
-    .display {
-        font-size: 1.5rem;
-    }
+.equalBtn{
+    background-color: #fb7c14;
 }
 
-/* Small screens */
-@media (max-width: 400px) {
-    #container {
-        grid-template-columns: repeat(5, 50px); 
-        grid-template-rows: repeat(6, 50px);    
-        grid-gap: 5px;
-    }
-
-    #container > button {
-        font-size: 1rem;
-        padding: 10px;
-    }
-
-    .display {
-        font-size: 1.2rem;
-    }
+.operator{
+    color: white;
 }
-
-
 
 
 
