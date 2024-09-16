@@ -7,35 +7,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        
-        <textarea  class="display" readonly></textarea>
-                
-        <button id="one">1</button>
-        <button id="two">2</button>
-        <button id="three">3</button>
-        <button id="four">4</button>
-        <button id="five">5</button>
-        <button id="six">6</button>
-        <button id="seven">7</button>
-        <button id="eight">8</button>
-        <button id="nine">9</button>
-        <button id="zero">0</button>
+    
+        <div class="container">
+          <div class="calculator">
+            <input type="text" id="inputBox" class="display" placeholder="0" />
+            <div>
+              <button id="ac" class="button operator">AC</button>
+              <button id="del"class="button operator">DEL</button>
+              <button id="percentage" class="button operator">%</button>
+              <button id="divide" class="button operator">/</button>
+            </div>
+            <div>
+              <button id="seven" class="button">7</button>
+              <button id="eight" class="button">8</button>
+              <button id="nine" class="button">9</button>
+              <button class="button operator" id="times">*</button>
+            </div>
+            <div>
+              <button id="four" class="button">4</button>
+              <button id="five" class="button">5</button>
+              <button id="six" class="button">6</button>
+              <button class="button operator" id="minus">-</button>
+            </div>
+            <div>
+              <button id="one" class="button">1</button>
+              <button id="two" class="button">2</button>
+              <button id="three" class="button">3</button>
+              <button id="plus">+</button>
+            </div>
+    
+            <div>
+              <button id="zero" class="button">0</button>
+              <button id="comma"class="button">.</button>
+              <button id="equals"class="button equalBtn">=</button>
+            </div>
+          </div>
+        </div>
+    
+        <script src="script.js"></script>
+    </body>
 
-
-        <button id="plus">+</button>
-        <button id="minus">-</button>
-        <button id="times">x</button>
-        <button id="divide">/</button>
-        <button id="percentage">%</button>
-        <button id="equals">=</button>
-
-        <button id="ac">ac</button>
-        <button id="del">del</button>
-        <button id="comma"> , </button>
-
-
-    </div>
-    <script src="script.js"></script>
-</body>
 </html>
